@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.edu.robson.course.entities.User;
+import br.edu.robson.course.entities.Usuario;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResource {
+public class UsuarioResource {
 	
 	@GetMapping
-	public ResponseEntity<User> findAll(){
+	public ResponseEntity<Usuario> findAll(){
 		
-		User u = new User(1, "Maria", "maria@gmail.com", "999999999", "12345");
+		Usuario u = new Usuario(1, "Maria", "maria@gmail.com", "999999999", "12345");
 		return ResponseEntity.ok().body(u);
 		
 	}
